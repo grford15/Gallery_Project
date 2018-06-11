@@ -38,3 +38,13 @@ post '/artists/delete/:id' do
   @artist.delete
   redirect '/artists'
 end
+
+get '/newexhibit' do
+  @artists = Artist.all
+  erb(:"exhibits/new")
+end
+
+post '/exhibits' do
+  Exhibit.new(params).save
+  redirect '/exhibits'
+end

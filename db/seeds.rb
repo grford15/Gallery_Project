@@ -25,7 +25,7 @@ artist2 = Artist.new ({
 exhibit1 = Exhibit.new ({
   'title' => 'La Vie',
   'year_created' => 1903,
-  'medium' => 'Oil-on-Canvas',
+  'medium' => 'Oil',
   'artist_id' => artist1.id
   })
 
@@ -34,7 +34,7 @@ exhibit1.save()
 exhibit2 = Exhibit.new ({
   'title' => 'The Starry Night',
   'year_created' => 1889,
-  'medium' => 'Oil-on-Canvas',
+  'medium' => 'Oil',
   'artist_id' => artist2.id
   })
 
@@ -43,7 +43,7 @@ exhibit2 = Exhibit.new ({
 exhibit3 = Exhibit.new ({
   'title' => 'Girl before a mirror',
   'year_created' => 1932,
-  'medium' => 'Oil-on-Canvas',
+  'medium' => 'Oil',
   'artist_id' => artist1.id
   })
 
@@ -52,7 +52,7 @@ exhibit3 = Exhibit.new ({
 exhibit4 = Exhibit.new ({
   'title' => 'Wheatfield with Crows',
   'year_created' => 1890,
-  'medium' => 'Oil-on-Canvas',
+  'medium' => 'Oil',
   'artist_id' => artist2.id
   })
 
