@@ -17,3 +17,13 @@ get '/exhibits' do
   @exhibits = Exhibit.all()
   erb( :"exhibits/exhibits")
 end
+
+get '/newartist' do
+  erb(:"artists/new")
+end
+
+post '/artists' do
+  @artist = Artist.new(params)
+  @artist.save()
+  redirect '/artists'
+end
