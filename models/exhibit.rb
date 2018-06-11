@@ -48,7 +48,7 @@ class Exhibit
   end
 
   def self.find(id)
-    sql = "SELECT FROM exhibits WHERE id = $1"
+    sql = "SELECT * FROM exhibits WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
     return Exhibit.new(result)

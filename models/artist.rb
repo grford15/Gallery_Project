@@ -18,7 +18,7 @@ class Artist
      VALUES ($1, $2, $3) RETURNING id"
     values = [@name, @nationality, @craft]
     result = SqlRunner.run(sql, values)
-    @id = result.first['id']
+    @id = result.first['id'].to_i
   end
 
   def delete()
@@ -46,10 +46,10 @@ class Artist
   end
 
   def self.find(id)
-    sql "SELECT FROM artists WHERE id = $1"
+    sql = "SELECT * FROM artists WHERE id = $1"
     values = [id]
-    result = SqlRunner.run(sql, values).first
-    return Artist.new(result)
+    result = SqlRunner.run(sql, values)
+    return Artist.new(result.first)
   end
 
 end
