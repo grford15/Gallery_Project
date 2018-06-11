@@ -1,0 +1,15 @@
+<h1>Artists</h1>
+<% for artist in @artists %>
+<table class = "artist_table">
+<tr>
+  <th>Name</th>
+  <th>Nationality</th>
+  <th>Craft</th>
+</tr>
+<tr>
+    <td><%= artist['name']%></td>
+    <td><%= artist['nationality']%></td>
+    <td><%= artist['craft']%></td>
+  </tr>
+</table>
+<%end%>

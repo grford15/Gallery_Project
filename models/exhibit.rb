@@ -38,7 +38,8 @@ class Exhibit
 
   def self.all
     sql = "SELECT * FROM exhibits"
-    SqlRunner.run(sql)
+    result = SqlRunner.run(sql)
+    return result.map { |exhibit| Exhibit.new(exhibit)}
   end
 
   def self.delete_all()

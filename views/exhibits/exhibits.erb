@@ -1,0 +1,20 @@
+<h1>Exhibits</h1>
+
+<% for exhibit in @exhibits %>
+
+<table class = "exhibit_table">
+<tr>
+  <th>Title</th>
+  <th>Year Created</th>
+  <th>Medium</th>
+  <th>Artist </th>
+</tr>
+<tr>
+    <td><%= exhibit['title']%></td>
+    <td><%= exhibit['year_created']%></td>
+    <td><%= exhibit['medium']%></td>
+    <td><%= exhibit['artist_id']%></td>
+  </tr>
+</table>
+
+<% end %>
