@@ -11,7 +11,7 @@ CREATE TABLE artists (
 CREATE TABLE exhibits (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
-  year_created VARCHAR(255),
+  year_created INT,
   medium VARCHAR(255),
   artist_id INT REFERENCES artists(id)
 );
