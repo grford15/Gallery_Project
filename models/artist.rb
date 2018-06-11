@@ -13,4 +13,14 @@ class Artist
     @craft = options['craft']
   end
 
+  def save()
+    sql = "INSERT INTO artists (name, nationality, craft)
+     VALUES ($1, $2, $3) RETURNING id"
+    values = [@name, @nationality, @craft]
+    result = SqlRunner.run(sql, values)
+    @id = result.first['id']
+  end
+
+   
+
 end
