@@ -2,6 +2,10 @@ require_relative('../models/artist')
 require_relative('../models/exhibit')
 require('pry-byebug')
 
+Exhibit.delete_all
+Artist.delete_all
+
+
 artist1 = Artist.new ({
   'name' => 'Pablo Picasso',
   'nationality' => 'Spanish',
@@ -35,6 +39,24 @@ exhibit2 = Exhibit.new ({
   })
 
   exhibit2.save()
+
+exhibit3 = Exhibit.new ({
+  'title' => 'Girl before a mirror',
+  'year_created' => 1932,
+  'medium' => 'Oil-on-Canvas',
+  'artist_id' => artist1.id
+  })
+
+  exhibit3.save()
+
+exhibit4 = Exhibit.new ({
+  'title' => 'Wheatfield with Crows',
+  'year_created' => 1890,
+  'medium' => 'Oil-on-Canvas',
+  'artist_id' => artist2.id
+  })
+
+  exhibit4.save()
 
 
 binding.pry

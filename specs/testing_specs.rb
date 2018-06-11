@@ -54,4 +54,5 @@ class TestExhibit < MiniTest::Test
     assert_equal(1, @exhibit1.artist_id)
   end
 
+
 end

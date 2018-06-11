@@ -27,13 +27,20 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE artists SET (name, nationality, craft)
+    = ($1, $2, $3) WHERE id = $4"
+    values = [@name, @nationality, @craft, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all
     sql = "SELECT * FROM artists"
     SqlRunner.run(sql)
   end
 
   def self.delete_all
-    sql= "DELETE * FROM artists"
+    sql= "DELETE FROM artists"
     SqlRunner.run(sql)
   end
 
