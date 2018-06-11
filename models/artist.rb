@@ -35,6 +35,13 @@ class Artist
   def self.delete_all
     sql= "DELETE * FROM artists"
     SqlRunner.run(sql)
-  end 
+  end
+
+  def self.find(id)
+    sql "SELECT FROM artists WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    return Artist.new(result)
+  end
 
 end
