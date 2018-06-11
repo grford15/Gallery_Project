@@ -51,7 +51,7 @@ class Exhibit
     sql = "SELECT * FROM exhibits WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return Exhibit.new(result)
+    return Exhibit.new(result.first)
   end
 
 end

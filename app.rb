@@ -48,3 +48,9 @@ post '/exhibits' do
   Exhibit.new(params).save
   redirect '/exhibits'
 end
+
+post '/exhibits/delete/:id' do
+  @exhibit = Exhibit.find(params['id'])
+  @exhbit.delete
+  redirect '/exhibits'
+end
