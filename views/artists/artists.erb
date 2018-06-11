@@ -7,11 +7,16 @@
   <th>Craft</th>
 </tr>
 <tr>
-    <td><%= artist['name']%></td>
-    <td><%= artist['nationality']%></td>
-    <td><%= artist['craft']%></td>
+    <td><a href="/artists/<%=artist.id%>"><%= artist.name%></a></td>
+    <td><%= artist.nationality%></td>
+    <td><%= artist.craft%></td>
   </tr>
 </table>
-<%end%>
+
 
 <a href="/newartist">Add a new artist</a>
+
+<form method="post" action="/artists/delete/<%=artist.id%>">
+  <input type="submit" value="Delete this Artist"/>
+</form>
+<%end%>

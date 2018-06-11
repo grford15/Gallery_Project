@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('models/artist')
 require_relative('models/exhibit')
-
+also_reload('models/*')
 
 get '/' do
   erb( :index )
@@ -29,6 +29,12 @@ post '/artists' do
 end
 
 get '/artists/:id' do
-  @artist = Artist.find(params[:id])
+  @artist = Artist.find(params['id'])
   erb(:"artists/show")
+end
+
+post '/artists/delete/:id' do
+  @artist = Artist.find(params['id'])
+  @artist.delete
+  redirect '/artists'
 end
