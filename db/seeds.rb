@@ -10,6 +10,7 @@ artist1 = Artist.new ({
 
 artist1.save()
 
+
 exhibit1 = Exhibit.new ({
   'title' => 'La Vie',
   'year_created' => 1903,
