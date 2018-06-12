@@ -51,6 +51,6 @@ end
 
 post '/exhibits/delete/:id' do
   @exhibit = Exhibit.find(params['id'])
-  @exhbit.delete
+  @exhibit.delete
   redirect '/exhibits'
 end

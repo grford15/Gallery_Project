@@ -1,20 +1,12 @@
 body {
-  background-color: #336699;
-}
-
-a {
-  color: white;
-}
-
-table {
-  table-layout: auto;
-    width: 400px;
-}
-
-nav {
-
+  font-family: 'Montserrat', sans-serif;
+  background: url('http://hilliardohio.gov/images/default-source/Public-Service-Department/Engineering/gallery.jpg?sfvrsn=0');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 li {
-  
+  display: inline;
+  padding: 15px;
+
 }
