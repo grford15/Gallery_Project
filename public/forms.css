@@ -1,4 +1,7 @@
 input[type="submit"] {
   font-family: 'Scope One', serif;
+  font-size: 10px;
   background-color: #b30000;
+  border-radius: 3px;
+  display: inline-flex;
 }
