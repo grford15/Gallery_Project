@@ -1,3 +1,5 @@
+<body style="background-image:none;background: linear-gradient(#bdc3c7, #2c3e50); background-size: 200%; background-repeat: no-repeat;">
+
 <h1>Artists</h1>
 <% for artist in @artists %>
 <table class = "artist_table">
@@ -14,7 +16,7 @@
 </table>
 
 
-<a href="/artists/edit/<%=artist.id%>">Edit Artists details</a>
+<a href="/artists/edit/<%=artist.id%>" class="artist-link">Edit Artists details</a>
 
 
 <form method="post" action="/artists/delete/<%=artist.id%>">
@@ -22,4 +24,4 @@
 </form>
 <%end%>
 
-<a href="/newartist">Add a new artist</a>
+<a href="/newartist" class="artist-link">Add a new artist</a>

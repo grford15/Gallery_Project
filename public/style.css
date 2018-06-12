@@ -1,3 +1,7 @@
+body .artist-bg {
+  background-color: white!important;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: url('http://hilliardohio.gov/images/default-source/Public-Service-Department/Engineering/gallery.jpg?sfvrsn=0');
@@ -5,8 +9,42 @@ body {
   background-size: 100%;
 }
 
+
+
+
 li {
   display: inline;
   padding: 15px;
 
+}
+
+.heading {
+display: flow-root;
+margin: auto;
+width: 80%;
+text-align: center;
+}
+
+
+table tr td {
+  width: 40%;
+  border: 1px solid white;
+  background-color: #b3b3b3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+table a {
+  text-decoration: none;
+}
+
+th {
+  width: 50%;
+  height: 50px;
+  text-align: left;
+}
+
+.artist-link {
+  /* background-color: blue;
+  color: white; */
 }
