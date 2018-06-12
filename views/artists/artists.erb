@@ -14,9 +14,12 @@
 </table>
 
 
-<a href="/newartist">Add a new artist</a>
+<a href="/artists/edit/<%=artist.id%>">Edit Artists details</a>
+
 
 <form method="post" action="/artists/delete/<%=artist.id%>">
   <input type="submit" value="Delete this Artist"/>
 </form>
 <%end%>
+
+<a href="/newartist">Add a new artist</a>

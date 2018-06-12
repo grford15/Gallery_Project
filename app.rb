@@ -33,6 +33,11 @@ get '/artists/:id' do
   erb(:"artists/show")
 end
 
+get '/exhibits/:id' do
+  @exhibit = Exhibit.find(params['id'])
+  erb(:"exhibits/show")
+end
+
 post '/artists/delete/:id' do
   @artist = Artist.find(params['id'])
   @artist.delete
@@ -52,5 +57,28 @@ end
 post '/exhibits/delete/:id' do
   @exhibit = Exhibit.find(params['id'])
   @exhibit.delete
+  redirect '/exhibits'
+end
+
+get '/artists/edit/:id' do
+  @artists = Artist.find(params['id'])
+  erb(:"artists/edit")
+end
+
+post '/artists/edit/:id' do
+  @artists = Artist.new(params)
+  @artists.update
+  redirect '/artists'
+end
+
+get '/exhibits/edit/:id' do
+  @artists = Artist.all
+  @exhibits = Exhibit.find(params['id'])
+  erb(:"exhibits/edit")
+end
+
+post '/exhibits/edit/:id' do
+  @exhibits = Exhibit.new(params)
+  @exhibits.update
   redirect '/exhibits'
 end

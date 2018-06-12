@@ -1,0 +1,26 @@
+<form method="post" action="/exhibits/edit/<%=@exhibits.id%>">
+
+  <label for="title">Title:</label>
+  <input id="title" type="text" name="title" value="<%=@exhibits.title%>"/>
+
+  <label for="year_created">Year Created:</label>
+  <input id="year_created" type="number" name="year_created" value="<%=@exhibits.year_created%>"/>
+
+  <label for="medium">Medium:</label>
+  <select id="medium" name="medium">
+    <option value="Oil">Oil</option>
+    <option value="Watercolour">Watercolour</option>
+    <option value="Pastil">Pastil</option>
+    <option value="Photograph">Photograph</option>
+    <option value="Stone">Stone</option>
+  </select>
+
+  <label for="artist_id">Artist:</label>
+  <select name = "artist_id">
+    <% for artist in @artists%>
+    <option value="<%= artist.id %>"><%= artist.name %></option>
+      <% end %>
+    </select>
+  <input type="submit" value="Edit this Exhibit"/>
+
+</form>

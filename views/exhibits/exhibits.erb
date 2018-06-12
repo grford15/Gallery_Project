@@ -10,16 +10,20 @@
   <th>Artist </th>
 </tr>
 <tr>
-    <td><%= exhibit.title%></td>
+    <td><a href="/exhibits/<%=exhibit.id%>"><%= exhibit.title%></a></td>
     <td><%= exhibit.year_created%></td>
     <td><%= exhibit.medium%></td>
     <td><%= exhibit.artist_id%></td>
   </tr>
 </table>
 
-<a href="/newexhibit">Add a new Exhibit</a>
+
 
 <form method="post" action="/exhibits/delete/<%=exhibit.id%>">
   <input type="submit" value="Delete this Exhibit"/>
 
+<a href="/exhibits/edit/<%=exhibit.id%>">Update Exhibits details</a>
+
 <% end %>
+
+<a href="/newexhibit">Add a new Exhibit</a>
