@@ -15,6 +15,10 @@ class Exhibit
 
   end
 
+  def artist
+    artist = Artist.find(@artist_id)
+  end
+
   def save()
     sql = "INSERT INTO exhibits (title, year_created, medium, artist_id)
     VALUES ($1, $2, $3, $4) RETURNING id"
