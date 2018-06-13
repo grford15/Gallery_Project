@@ -25,10 +25,12 @@ margin: auto;
 width: 80%;
 }
 
-.heading h1 {
+.heading h2 {
   text-align: center;
   color: #002266;
-  text-transform: capitalize;
+  position: relative;
+  top: 60px;
+
 }
 
 .nav-bar a {
@@ -67,6 +69,14 @@ div {
   color: white;
 }
 
+.exhibit-link {
+  background-color: #002266;
+  border-radius: 3px;
+  padding: 2px;
+  margin: 1px;
+  display: inline-flex;
+  color: white;
+}
 
 table tr td {
   width: 40%;

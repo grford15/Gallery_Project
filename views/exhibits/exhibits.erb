@@ -19,6 +19,8 @@
 
 <h1>Exhibits</h1>
 
+<a href="/newexhibit" class="artist-link">Add a new Exhibit</a>
+
 <% for exhibit in @exhibits %>
 
 <table class = "exhibit_table">
@@ -41,8 +43,6 @@
 <form method="post" action="/exhibits/delete/<%=exhibit.id%>">
   <input type="submit" value="Delete this Exhibit"/>
 
-<a href="/exhibits/edit/<%=exhibit.id%>">Update Exhibits details</a>
+<a href="/exhibits/edit/<%=exhibit.id%>" class="artist-link">Update Exhibits details</a>
 
 <% end %>
-
-<a href="/newexhibit">Add a new Exhibit</a>

@@ -2,20 +2,32 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <style>
   body {
-    background-image:none;
-    background: linear-gradient(#bdc3c7, #2c3e50);
-    background-size: 800%;
+    background-image:url('http://www.union-gallery.com/layout/img/union_body_bc.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif;
   }
 
   li {
     display: inline-block;
+    position:relative;
+    left: 200px;
+    bottom: 40px;
+    }
+
+    input[type="submit"] {
+      background-color: #009900;
+    }
+
+    div {
+      position: relative;
+      top: 180px;
+      left: 80px;
     }
 
   </style>
 </head>
-
+<div>
 <form method="post" action="/artists/edit/<%=@artists.id%>">
 
   <label for="name">Name:</label>
@@ -34,3 +46,4 @@
   <input type="submit" value="Edit this Artist"/>
 
 </form>
+</div>

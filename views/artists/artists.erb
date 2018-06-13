@@ -1,6 +1,8 @@
 <body style="background-image:none;background: linear-gradient(#bdc3c7, #2c3e50); background-size: 150%; background-repeat: no-repeat;">
 
 <h1>Artists</h1>
+
+<a href="/newartist" class="artist-link">Add a new artist</a>
 <% for artist in @artists %>
 <table class = "artist_table">
 <tr>
@@ -23,5 +25,3 @@
   <input type="submit" value="Delete this Artist"/>
 </form>
 <%end%>
-
-<a href="/newartist" class="artist-link">Add a new artist</a>
