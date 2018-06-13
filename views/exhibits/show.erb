@@ -2,23 +2,31 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <style>
   body {
-    background-image:none;
-    background: linear-gradient(#bdc3c7, #2c3e50);
-    background-size: 400%;
+    background-image:url('https://popupgo.com/components/com_jomcomdev/images/uq/915-Gallery00.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif;
   }
 
   li {
     display: inline-block;
+    position: relative;
+    bottom: 30px;
     }
+
+  div {
+    position: relative;
+    left: 100px;
+    top: 140px;
+  }
 
   </style>
 </head>
-
+<div>
 <h4>Title: <%=@exhibit.title%></h4>
 <h4>Year Created: <%=@exhibit.year_created%></h4>
 <h4>Medium: <%=@exhibit.medium%></h4>
 <h4>Artist: <%=@exhibit.artist_id%></h4>
 
 <a href="/exhibits/edit/<%=@exhibit.id%>">Update Exhibits details</a>
+</div>

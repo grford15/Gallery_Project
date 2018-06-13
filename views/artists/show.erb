@@ -2,20 +2,27 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <style>
   body {
-    background-image:none;
-    background: linear-gradient(#bdc3c7, #2c3e50);
-    background-size: 500%;
+    background-image:url('http://www.aga.org.tw/wp-content/uploads/2016/03/gallery-1080x720.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif;
   }
 
   li {
     display: inline-block;
+    position: relative;
+    bottom: 30px;
     }
+
+  div {
+    position: relative;
+    left: 100px;
+    top: 80px;
+  }
 
   </style>
 </head>
-
+<div>
 <body>
 <h4>Name: <%= @artist.name %></h4>
 <h4>Nationality: <%= @artist.nationality%></h4>
@@ -23,3 +30,4 @@
 
 <a href="/artists/edit/<%=@artist.id%>" class="artist-link">Edit Artists details</a>
 </body>
+</div>

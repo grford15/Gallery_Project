@@ -5,13 +5,6 @@ body {
   background-size: 100%;
 }
 
-#show-body {
-  background-image:none;
-  background: linear-gradient(#bdc3c7, #2c3e50);
-  background-size: 200%;
-  background-repeat: no-repeat;"
-}
-
 li {
   display: inline;
   padding: 15px;
@@ -53,10 +46,16 @@ div {
 .artist_table{
   border-collapse: collapse;
   border-radius: 5px;
+  table-layout: fixed;
+  white-space: nowrap;
+  width: 100%
 }
 
 .exhibit_table {
   border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .artist-link {
