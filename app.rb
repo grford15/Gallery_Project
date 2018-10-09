@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('models/artist')
 require_relative('models/exhibit')
-also_reload('models/*')
+# also_reload('models/*')
 
 get '/' do
   erb( :index )
