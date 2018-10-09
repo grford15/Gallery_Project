@@ -1,6 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background: url('http://hilliardohio.gov/images/default-source/Public-Service-Department/Engineering/gallery.jpg?sfvrsn=0');
+  background-image:url('http://www.union-gallery.com/layout/img/union_body_bc.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -9,6 +9,10 @@ li {
   display: inline;
   padding: 15px;
 
+}
+
+.nav-bar{
+  margin: 50px;
 }
 
 input[type="submit"] {
@@ -29,7 +33,7 @@ width: 80%;
   text-align: center;
   color: #002266;
   position: relative;
-  top: 60px;
+  top: 120px;
 
 }
 
