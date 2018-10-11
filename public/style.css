@@ -63,19 +63,21 @@ div {
 .artist-link {
   background-color: green;
   text-decoration: none;
-  padding: 3px;
+  padding: 2px;
   color: white;
   border-radius: 3px;
   margin: 4px;
+  display: inline-block;
 }
 
 .exhibit-link {
   background-color: #002266;
   border-radius: 3px;
   padding: 2px;
-  margin: 1px;
-  display: inline-flex;
+  margin: 4px;
+  display: inline-block;
   color: white;
+  border-radius: 3px;
 }
 
 table tr td {
